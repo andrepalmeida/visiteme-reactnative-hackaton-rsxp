@@ -1,4 +1,5 @@
 import React from 'react';
+import { Alert } from 'react-native';
 import MapView, { Marker, PROVIDER_GOOGLE } from 'react-native-maps';
 
 import BaseView from '../../components/BaseView';
@@ -33,6 +34,9 @@ export default function Events() {
               coordinate={marker}
               title="Título do Evento"
               description="Descrição do Evento"
+              onPress={() => {
+                Alert.alert('Confirmar evento');
+              }}
             />
           ))}
         </MapView>
