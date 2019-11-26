@@ -1,12 +1,13 @@
 import React from 'react';
-import { View, Text } from 'react-native';
 
-// import { Container } from './styles';
+import BaseView from '../../components/BaseView';
+
+import { Container } from './styles';
 
 export default function Events() {
   return (
-    <View>
-      <Text>Eventos</Text>
-    </View>
+    <BaseView title="Eventos">
+      <Container />
+    </BaseView>
   );
 }
