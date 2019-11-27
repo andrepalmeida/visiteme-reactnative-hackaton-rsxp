@@ -13,9 +13,21 @@ function BottonTab({ navigation }) {
 
   return (
     <Container>
-      <Tab name="public" onPress={() => handleNavigation('Events')} />
-      <Tab name="dehaze" onPress={() => handleNavigation('MyEvents')} />
-      <Tab name="account-circle" onPress={() => handleNavigation('Profile')} />
+      <Tab
+        label="Eventos"
+        name="public"
+        onPress={() => handleNavigation('Events')}
+      />
+      <Tab
+        label="Meus Eventos"
+        name="access-time"
+        onPress={() => handleNavigation('MyEvents')}
+      />
+      <Tab
+        label="Perfil"
+        name="account-circle"
+        onPress={() => handleNavigation('Profile')}
+      />
     </Container>
   );
 }

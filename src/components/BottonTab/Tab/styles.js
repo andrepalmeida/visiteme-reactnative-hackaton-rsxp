@@ -5,3 +5,8 @@ export const Container = styled.TouchableOpacity`
   justify-content: center;
   align-items: center;
 `;
+
+export const Label = styled.Text`
+  color: #fff;
+  font-size: 12px;
+`;
