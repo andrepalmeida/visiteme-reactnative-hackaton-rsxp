@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Linking, Alert } from 'react-native';
 import PropTypes from 'prop-types';
 import Modal from 'react-native-modal';
 import Icon from 'react-native-vector-icons/MaterialIcons';
@@ -26,6 +27,16 @@ export default function ViewEvent({ isVisible, onClose, data }) {
   function onCloseHandler() {
     setCurrentState(0);
     onClose();
+  }
+
+  function openFileHandler() {
+    Linking.openURL(
+      'https://files.convertkitcdnh.com/assets/documents/144672/2636321/TERMO_DE_RESPONSABILIDADE_MENORES_SIGLA.pdf'
+    );
+
+    setTimeout(() => {
+      Alert.alert('Visita agendada com sucesso!');
+    }, 2500);
   }
 
   return (
@@ -60,7 +71,10 @@ export default function ViewEvent({ isVisible, onClose, data }) {
                 imprima, peça para um responsável assinar, e não esqueça de
                 levar esse documento assinado com você no dia de sua visita!
               </Message>
-              <Button label="Download da Autorização" onPress={() => {}} />
+              <Button
+                label="Download da Autorização"
+                onPress={openFileHandler}
+              />
             </>
           )}
         </Content>
