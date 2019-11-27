@@ -8,6 +8,7 @@ import { Container } from './styles';
 
 const markers = [
   {
+    id: 1,
     title: 'Google',
     description: 'Uma visita pelos vários setores da empresa.',
     date: '10/12/2019',
@@ -16,6 +17,7 @@ const markers = [
     longitude: -46.6242712,
   },
   {
+    id: 2,
     title: 'Facebook',
     description: 'Uma visita pelos vários setores da empresa.',
     date: '11/12/2019',
@@ -24,6 +26,7 @@ const markers = [
     longitude: -46.602321,
   },
   {
+    id: 3,
     title: 'Uber',
     description: 'Uma visita pelos vários setores da empresa.',
     date: '12/12/2019',
@@ -32,6 +35,7 @@ const markers = [
     longitude: -46.6124392,
   },
   {
+    id: 4,
     title: 'Microsoft',
     description: 'Uma visita pelos vários setores da empresa.',
     date: '15/12/2019',
@@ -40,6 +44,7 @@ const markers = [
     longitude: -46.6142827,
   },
   {
+    id: 5,
     title: 'iFood',
     description: 'Uma visita pelos vários setores da empresa.',
     date: '16/12/2019',

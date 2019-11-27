@@ -3,6 +3,9 @@ import { Linking, Alert } from 'react-native';
 import PropTypes from 'prop-types';
 import Modal from 'react-native-modal';
 import Icon from 'react-native-vector-icons/MaterialIcons';
+import { useDispatch } from 'react-redux';
+
+import * as UserEventsActions from '../../store/modules/userevents/actions';
 
 import card from '../../assets/card-event.jpg';
 
@@ -24,6 +27,8 @@ import {
 export default function ViewEvent({ isVisible, onClose, data }) {
   const [currentState, setCurrentState] = useState(0);
 
+  const dispatch = useDispatch();
+
   function onCloseHandler() {
     setCurrentState(0);
     onClose();
@@ -33,6 +38,8 @@ export default function ViewEvent({ isVisible, onClose, data }) {
     Linking.openURL(
       'https://files.convertkitcdnh.com/assets/documents/144672/2636321/TERMO_DE_RESPONSABILIDADE_MENORES_SIGLA.pdf'
     );
+
+    dispatch(UserEventsActions.addEvent(data));
 
     setTimeout(() => {
       Alert.alert('Visita agendada com sucesso!');
