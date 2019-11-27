@@ -16,8 +16,8 @@ export default function Login({ navigation }) {
   return (
     <Container>
       <Logo source={logo} resizeMode="contain" />
-      <TxInput placeholder="Email" />
-      <TxInput placeholder="Senha" secureTextEntry />
+      <TxInput placeholder="Email" value="joaosilva@gmail.com" />
+      <TxInput placeholder="Senha" secureTextEntry value="123456" />
       <Button label="Entrar" onPress={handleSubmit} />
 
       <Register onPress={() => navigation.navigate('Register')}>

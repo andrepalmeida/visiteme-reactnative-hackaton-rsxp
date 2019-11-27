@@ -32,7 +32,7 @@ export const Title = styled.Text`
 
 export const Description = styled.Text`
   font-size: 13px;
-  color: #aaa;
+  color: #666;
 `;
 
 export const Hbox = styled.View`
@@ -43,7 +43,7 @@ export const Hbox = styled.View`
 
 export const Time = styled.Text`
   font-size: 13px;
-  color: #aaa;
+  color: #666;
 `;
 
 export const Message = styled.Text`

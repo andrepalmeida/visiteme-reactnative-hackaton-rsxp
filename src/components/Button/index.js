@@ -3,9 +3,9 @@ import PropTypes from 'prop-types';
 
 import { Container, Label } from './styles';
 
-export default function Button({ label, onPress }) {
+export default function Button({ label, onPress, style }) {
   return (
-    <Container onPress={onPress}>
+    <Container style={style} onPress={onPress}>
       <Label>{label}</Label>
     </Container>
   );
@@ -14,4 +14,9 @@ export default function Button({ label, onPress }) {
 Button.propTypes = {
   label: PropTypes.string.isRequired,
   onPress: PropTypes.func.isRequired,
+  style: PropTypes.shape({}),
+};
+
+Button.defaultProps = {
+  style: {},
 };
